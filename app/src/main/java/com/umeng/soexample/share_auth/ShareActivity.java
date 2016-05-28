@@ -19,7 +19,7 @@ import com.umeng.socialize.media.UMusic;
 import com.umeng.socialize.shareboard.SnsPlatform;
 import com.umeng.socialize.utils.Log;
 import com.umeng.socialize.utils.ShareBoardlistener;
-import com.thinkman.thinknews.R;
+import com.umeng.soexample.R;
 
 /**
  * Created by umeng on 15/9/14.
@@ -46,7 +46,7 @@ public class ShareActivity extends Activity{
            case R.id.app_open_share:
                /**shareboard  need the platform all you want and callbacklistener,then open it**/
                new ShareAction(this).setDisplayList(SHARE_MEDIA.SINA,SHARE_MEDIA.QQ,SHARE_MEDIA.QZONE,SHARE_MEDIA.WEIXIN,SHARE_MEDIA.WEIXIN_CIRCLE,SHARE_MEDIA.WEIXIN_FAVORITE)
-                       .withText("鏉ヨ嚜鍙嬬洘鍒嗕韩闈㈡澘")
+                       .withText("来自友盟分享面板")
                        .withMedia(image)
                        .setCallback(umShareListener)
                        .open();
@@ -58,9 +58,9 @@ public class ShareActivity extends Activity{
                             @Override
                             public void onclick(SnsPlatform snsPlatform, SHARE_MEDIA share_media) {
                                 if (snsPlatform.mShowWord.equals("umeng_sharebutton_custom")){
-                                    Toast.makeText(ShareActivity.this,"鑷畾涔夋寜閽�",Toast.LENGTH_LONG).show();
+                                    Toast.makeText(ShareActivity.this,"自定义按钮",Toast.LENGTH_LONG).show();
                                 }else {
-                                    new ShareAction(ShareActivity.this).withText("鏉ヨ嚜鍙嬬洘鑷畾涔夊垎浜潰鏉�")
+                                    new ShareAction(ShareActivity.this).withText("来自友盟自定义分享面板")
                                             .setPlatform(share_media)
                                             .setCallback(umShareListener)
                                             .share();
@@ -242,20 +242,20 @@ public class ShareActivity extends Activity{
         public void onResult(SHARE_MEDIA platform) {
             Log.d("plat","platform"+platform);
             if(platform.name().equals("WEIXIN_FAVORITE")){
-                Toast.makeText(ShareActivity.this,platform + " 鏀惰棌鎴愬姛鍟�",Toast.LENGTH_SHORT).show();
+                Toast.makeText(ShareActivity.this,platform + " 收藏成功啦",Toast.LENGTH_SHORT).show();
             }else{
-                Toast.makeText(ShareActivity.this, platform + " 鍒嗕韩鎴愬姛鍟�", Toast.LENGTH_SHORT).show();
+                Toast.makeText(ShareActivity.this, platform + " 分享成功啦", Toast.LENGTH_SHORT).show();
             }
         }
 
         @Override
         public void onError(SHARE_MEDIA platform, Throwable t) {
-            Toast.makeText(ShareActivity.this,platform + " 鍒嗕韩澶辫触鍟�", Toast.LENGTH_SHORT).show();
+            Toast.makeText(ShareActivity.this,platform + " 分享失败啦", Toast.LENGTH_SHORT).show();
         }
 
         @Override
         public void onCancel(SHARE_MEDIA platform) {
-            Toast.makeText(ShareActivity.this,platform + " 鍒嗕韩鍙栨秷浜�", Toast.LENGTH_SHORT).show();
+            Toast.makeText(ShareActivity.this,platform + " 分享取消了", Toast.LENGTH_SHORT).show();
         }
     };
 
@@ -264,7 +264,7 @@ public class ShareActivity extends Activity{
         @Override
         public void onclick(SnsPlatform snsPlatform,SHARE_MEDIA share_media) {
             new ShareAction(ShareActivity.this).setPlatform(share_media).setCallback(umShareListener)
-                    .withText("澶氬钩鍙板垎浜�")
+                    .withText("多平台分享")
                     .share();
         }
     };

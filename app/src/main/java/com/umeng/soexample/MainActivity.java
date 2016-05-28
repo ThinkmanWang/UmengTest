@@ -20,7 +20,8 @@ import com.umeng.socialize.utils.Log;
 import com.umeng.soexample.share_auth.ShareandAuthActivity;
 
 
-import com.thinkman.thinknews.R;
+
+import com.umeng.soexample.R;
 
 
 /**

@@ -1,16 +1,18 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.thinkman.thinknews"
+    package="com.umeng.soexample"
 
     android:versionCode="7"
     android:versionName="5.1.2">
 
+
+
     <application android:allowBackup="true" android:label="@string/app_name"
         android:icon="@drawable/umeng_launcher"
-        android:name="com.umeng.soexample.App">
+        android:name=".App">
         <!-- below activity that demo required,has nothing to with umeng sdk  -->
         <activity
-            android:name="com.umeng.soexample.MainActivity"
+            android:name=".MainActivity"
             android:configChanges="orientation|keyboard"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
@@ -22,7 +24,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.umeng.soexample.share_auth.ShareandAuthActivity"
+            android:name=".share_auth.ShareandAuthActivity"
             android:configChanges="orientation|keyboard"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
@@ -32,7 +34,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.umeng.soexample.share_auth.AuthActivity"
+            android:name=".share_auth.AuthActivity"
             android:configChanges="orientation|keyboard"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
@@ -42,7 +44,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.umeng.soexample.share_auth.UserinfoActivity"
+            android:name=".share_auth.UserinfoActivity"
             android:configChanges="orientation|keyboard"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
@@ -52,7 +54,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.umeng.soexample.share_auth.ShareActivity"
+            android:name=".share_auth.ShareActivity"
             android:configChanges="orientation|keyboard"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
@@ -65,7 +67,7 @@
         <!-- *************************    related to Share START **************************** -->
         <!-- Share edit page-->
         <activity
-            android:name="com.umeng.soexample.WBShareActivity"
+            android:name=".WBShareActivity"
             android:configChanges="keyboardHidden|orientation"
             android:screenOrientation="portrait" >
             <intent-filter>
@@ -81,7 +83,7 @@
         </activity>
         <!-- 易信回调activity -->
         <activity
-            android:name="com.umeng.soexample.yxapi.YXEntryActivity"
+            android:name=".yxapi.YXEntryActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:exported="true"
             android:screenOrientation="portrait"
@@ -95,14 +97,14 @@
             />
         <!-- wechat callback-->
         <activity
-            android:name="com.umeng.soexample.wxapi.WXEntryActivity"
+            android:name=".wxapi.WXEntryActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:exported="true"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
         <!-- alipay callback-->
         <activity
-            android:name="com.umeng.soexample.apshare.ShareEntryActivity"
+            android:name=".apshare.ShareEntryActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:exported="true"
             android:screenOrientation="portrait"
@@ -160,7 +162,7 @@
         <!-- umengAppKey，replace to yours -->
         <meta-data
             android:name="UMENG_APPKEY"
-            android:value="573ebb9be0f55a8899000ab7" >
+            android:value="561cae6ae0f55abd990035bf" >
         </meta-data>
         <meta-data
             android:name="UMENG_CHANNEL"
